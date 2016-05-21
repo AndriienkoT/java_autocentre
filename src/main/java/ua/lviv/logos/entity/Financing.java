@@ -78,7 +78,6 @@ public class Financing {
                 ", type='" + type + '\'' +
                 ", term=" + term +
                 ", percent=" + percent +
-                ", ordeRList=" + myOrderList +
                 '}';
     }
 }

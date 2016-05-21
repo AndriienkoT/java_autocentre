@@ -65,7 +65,6 @@ public class TechSupport {
                 "id=" + id +
                 ", support_type='" + support_type + '\'' +
                 ", price=" + price +
-                ", car=" + car +
                 '}';
     }
 }

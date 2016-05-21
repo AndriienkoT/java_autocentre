@@ -90,7 +90,6 @@ public class User {
                 ", surname='" + surname + '\'' +
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
-                ", ordeRList=" + myOrderList +
                 '}';
     }
 }

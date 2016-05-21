@@ -126,7 +126,6 @@ public class MyOrder {
                 ", fin_type='" + fin_type + '\'' +
                 ", user=" + user +
                 ", financing=" + financing +
-                ", carList=" + carList +
                 '}';
     }
 }

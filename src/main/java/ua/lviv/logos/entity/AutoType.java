@@ -55,7 +55,6 @@ public class AutoType {
         return "AutoType{" +
                 "id=" + id +
                 ", auto_type='" + auto_type + '\'' +
-                ", carList=" + carList +
                 '}';
     }
 }

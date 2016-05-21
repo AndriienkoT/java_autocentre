@@ -157,10 +157,6 @@ public class Car {
                 ", year_of_issue=" + year_of_issue +
                 ", mileage=" + mileage +
                 ", price=" + price +
-                ", autoType=" + autoType +
-                ", partsAndAccessoriesList=" + partsAndAccessoriesList +
-                ", techSupportList=" + techSupportList +
-                ", ordeRList=" + myOrderList +
                 '}';
     }
 }

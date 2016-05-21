@@ -77,7 +77,6 @@ public class PartsAndAccessories {
                 ", name='" + name + '\'' +
                 ", amount=" + amount +
                 ", price=" + price +
-                ", car=" + car +
                 '}';
     }
 }
