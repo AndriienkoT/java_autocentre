@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="MySQL - autocenter@localhost" uuid="725b6526-0d2a-45ed-86b7-9270d417db00">
+    <data-source name="MySQL - autocenter@localhost" uuid="bc7b7d6e-efc2-428c-aacc-8434104d3f64">
       <secret-storage>memory</secret-storage>
       <user-name>root</user-name>
       <schema-pattern>autocenter.*</schema-pattern>

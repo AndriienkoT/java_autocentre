@@ -24,7 +24,7 @@ public class AutoTypeDaoImpl implements AutoTypeDao {
     }
 
     @Transactional
-    public void update(AutoType autoType) {
+    public void edit(AutoType autoType) {
         entityManager.merge(autoType);
     }
 

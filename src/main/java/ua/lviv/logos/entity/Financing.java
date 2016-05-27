@@ -7,6 +7,9 @@ import java.util.List;
  * Created by user on 16/05/2016.
  */
 @Entity
+@NamedQueries({
+        @NamedQuery(name = "Financing.findByType", query = "SELECT f FROM Financing f where f.type like :type")
+})
 public class Financing {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

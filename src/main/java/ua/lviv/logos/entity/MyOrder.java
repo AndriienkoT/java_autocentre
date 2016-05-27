@@ -1,6 +1,7 @@
 package ua.lviv.logos.entity;
 
 import javax.persistence.*;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -8,6 +9,9 @@ import java.util.List;
  * Created by user on 19/05/2016.
  */
 @Entity
+@NamedQueries({
+        @NamedQuery(name = "MyOrder.findByCustomer", query = "SELECT o FROM MyOrder o where o.customer like :customer")
+})
 public class MyOrder {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,8 +39,8 @@ public class MyOrder {
     public MyOrder() {
     }
 
-    public MyOrder(Date order_date, String customer, String auto, double price, String fin_type) {
-        this.order_date = order_date;
+    public MyOrder(String customer, String auto, double price, String fin_type) {
+        this.order_date = Calendar.getInstance().getTime();
         this.customer = customer;
         this.auto = auto;
         this.price = price;

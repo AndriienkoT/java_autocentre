@@ -9,7 +9,7 @@ import javax.persistence.Persistence;
  */
 public class Main {
     public static void main(String[] args) {
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("qwerty");
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("Main");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         entityManager.getTransaction().begin();
 
@@ -20,23 +20,10 @@ public class Main {
         entityManager.persist(new Car("A1", "", 1.4, "TSI", 2016, 0, 26000));
         entityManager.persist(new Car("A5", "Sportback", 2.0, "TSI", 2016, 0, 45000));
 
-
-        Car car = entityManager.find(Car.class, 1);
-        car.setAutoType(entityManager.find(AutoType.class, 1));
-        entityManager.merge(car);
-
-        List<AutoType>autoTypeList = entityManager.createQuery("from AutoType").getResultList();
-        for (AutoType at:
-             autoTypeList) {
-            System.out.println(at);
-        }
-
-        
         entityManager.persist(new Financing("credit", 60, 23));
         entityManager.persist(new Financing("leasing", 36, 21));
 
-        Date date = new Date();
-        entityManager.persist(new MyOrder(date, "Markov Denis", "Audi A5 Sportback 3.0TSI", 52000, "credit"));
+        entityManager.persist(new MyOrder("Markov Denis", "Audi A5 Sportback 3.0TSI", 52000, "credit"));
 
         entityManager.persist(new PartsAndAccessories("tyre", 20, 1200));
         entityManager.persist(new PartsAndAccessories("oil", 10, 120));

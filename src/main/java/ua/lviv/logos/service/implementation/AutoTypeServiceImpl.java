@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ua.lviv.logos.dao.AutoTypeDao;
 import ua.lviv.logos.entity.AutoType;
-import ua.lviv.logos.entity.Car;
 import ua.lviv.logos.service.AutoTypeService;
 
 import java.util.List;
@@ -31,7 +30,7 @@ public class AutoTypeServiceImpl implements AutoTypeService {
         if(auto_type!=null){
             autoType.setAuto_type(auto_type);
         }
-        autoTypeDao.update(autoType);
+        autoTypeDao.edit(autoType);
     }
 
     @Transactional

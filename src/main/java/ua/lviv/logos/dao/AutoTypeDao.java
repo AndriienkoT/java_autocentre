@@ -10,7 +10,7 @@ import java.util.List;
 public interface AutoTypeDao {
     public void add(AutoType autoType);
 
-    public void update(AutoType autoType);
+    public void edit(AutoType autoType);
 
     public void delete(AutoType autoType);
 

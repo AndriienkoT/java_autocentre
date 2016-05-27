@@ -6,6 +6,9 @@ import javax.persistence.*;
  * Created by user on 16/05/2016.
  */
 @Entity
+@NamedQueries({
+        @NamedQuery(name = "TechSupport.findBySupportType", query = "SELECT s FROM TechSupport s where s.support_type like :support_type")
+})
 public class TechSupport {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
