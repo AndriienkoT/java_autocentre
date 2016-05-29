@@ -72,14 +72,4 @@ public class PartsAndAccessories {
     public void setCar(Car car) {
         this.car = car;
     }
-
-    @Override
-    public String toString() {
-        return "PartsAndAccessories{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", amount=" + amount +
-                ", price=" + price +
-                '}';
-    }
 }

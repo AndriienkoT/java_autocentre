@@ -8,7 +8,9 @@ import java.util.List;
  */
 @Entity
 @NamedQueries({
-        @NamedQuery(name = "Car.findByModel", query = "SELECT c FROM Car c where c.model like :model")
+        @NamedQuery(name = "Car.findByModel", query = "SELECT c FROM Car c where c.model like :model"),
+        @NamedQuery(name = "Car.findByEngineVolume", query = "SELECT c FROM Car c where c.engine_volume like :engine_volume"),
+        @NamedQuery(name = "Car.findByYearOfIssue", query = "SELECT c FROM Car c where c.year_of_issue like :year_of_issue")
 })
 public class Car {
     @Id
@@ -147,19 +149,5 @@ public class Car {
 
     public void setOrdeRList(List<MyOrder> myOrderList) {
         this.myOrderList = myOrderList;
-    }
-
-    @Override
-    public String toString() {
-        return "Car{" +
-                "id=" + id +
-                ", model='" + model + '\'' +
-                ", equipment='" + equipment + '\'' +
-                ", engine_volume=" + engine_volume +
-                ", engine_type='" + engine_type + '\'' +
-                ", year_of_issue=" + year_of_issue +
-                ", mileage=" + mileage +
-                ", price=" + price +
-                '}';
     }
 }

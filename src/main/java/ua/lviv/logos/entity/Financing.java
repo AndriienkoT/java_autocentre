@@ -73,14 +73,4 @@ public class Financing {
     public void setOrdeRList(List<MyOrder> myOrderList) {
         this.myOrderList = myOrderList;
     }
-
-    @Override
-    public String toString() {
-        return "Financing{" +
-                "id=" + id +
-                ", type='" + type + '\'' +
-                ", term=" + term +
-                ", percent=" + percent +
-                '}';
-    }
 }

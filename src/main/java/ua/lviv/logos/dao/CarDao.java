@@ -19,4 +19,8 @@ public interface CarDao {
     public List<Car> findAll();
 
     public List<Car> findByModel(String model);
+
+    public List<Car> findByEngineVolume(double engine_volume);
+
+    public List<Car> findByYearOfIssue(int year_of_issue);
 }

@@ -105,4 +105,14 @@ public class CarServiceImpl implements CarService {
     public List<Car> findByModel(String model) {
         return carDao.findByModel(model);
     }
+
+    @Transactional
+    public List<Car> findByEngineVolume(double engine_volume) {
+        return carDao.findByEngineVolume(engine_volume);
+    }
+
+    @Transactional
+    public List<Car> findByYearOfIssue(int year_of_issue) {
+        return carDao.findByYearOfIssue(year_of_issue);
+    }
 }

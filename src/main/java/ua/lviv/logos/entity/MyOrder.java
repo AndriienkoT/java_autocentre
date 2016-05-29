@@ -118,18 +118,4 @@ public class MyOrder {
     public void setCarList(List<Car> carList) {
         this.carList = carList;
     }
-
-    @Override
-    public String toString() {
-        return "OrdeR{" +
-                "id=" + id +
-                ", order_date=" + order_date +
-                ", customer='" + customer + '\'' +
-                ", auto='" + auto + '\'' +
-                ", price=" + price +
-                ", fin_type='" + fin_type + '\'' +
-                ", user=" + user +
-                ", financing=" + financing +
-                '}';
-    }
 }

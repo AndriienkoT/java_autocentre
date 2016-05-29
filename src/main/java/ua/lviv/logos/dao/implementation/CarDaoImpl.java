@@ -47,4 +47,14 @@ public class CarDaoImpl implements CarDao {
     public List<Car> findByModel(String model) {
         return entityManager.createNamedQuery("Car.findByModel", Car.class).setParameter("model", model).getResultList();
     }
+
+    @Transactional
+    public List<Car> findByEngineVolume(double engine_volume) {
+        return entityManager.createNamedQuery("Car.findByEngineVolume", Car.class).setParameter("engine_volume", engine_volume).getResultList();
+    }
+
+    @Transactional
+    public List<Car> findByYearOfIssue(int year_of_issue) {
+        return entityManager.createNamedQuery("Car.findByYearOfIssue", Car.class).setParameter("year_of_issue", year_of_issue).getResultList();
+    }
 }

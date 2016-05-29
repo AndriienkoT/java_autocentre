@@ -61,13 +61,4 @@ public class TechSupport {
     public void setCar(Car car) {
         this.car = car;
     }
-
-    @Override
-    public String toString() {
-        return "TechSupport{" +
-                "id=" + id +
-                ", support_type='" + support_type + '\'' +
-                ", price=" + price +
-                '}';
-    }
 }

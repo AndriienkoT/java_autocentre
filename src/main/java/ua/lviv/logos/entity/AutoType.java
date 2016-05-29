@@ -49,12 +49,4 @@ public class AutoType {
     public void setCarList(List<Car> carList) {
         this.carList = carList;
     }
-
-    @Override
-    public String toString() {
-        return "AutoType{" +
-                "id=" + id +
-                ", auto_type='" + auto_type + '\'' +
-                '}';
-    }
 }

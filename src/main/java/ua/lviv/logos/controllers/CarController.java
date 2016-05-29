@@ -27,4 +27,15 @@ public class CarController {
         carService.add(model, equipment, engine_volume, engine_type, year_of_issue, mileage, price);
         return "redirect:/showAllCars";
     }
+
+    @RequestMapping(value = "/findByModel", method = RequestMethod.GET)
+    public String findByModel(Model model){
+        return "findByModel";
+    }
+
+    @RequestMapping(value = "/findByModel", method = RequestMethod.POST)
+    public String findByModel(@RequestParam(value = "model") String model){
+        carService.findByModel(model);
+        return "redirect:/findByModel";
+    }
 }
