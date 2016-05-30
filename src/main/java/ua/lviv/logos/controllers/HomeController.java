@@ -28,6 +28,6 @@ public class HomeController {
     public String showAllCars(Model model){
         List<Car> carList = carService.findAll();
         model.addAttribute("cars", carList);
-        return "allCars";
+        return "car-all";
     }
 }

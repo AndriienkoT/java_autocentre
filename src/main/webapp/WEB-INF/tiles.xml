@@ -10,19 +10,39 @@
         <put-attribute name="footer" value="/views/tiles/footer.jsp"/>
     </definition>
 
-    <definition name="allCars" extends="base.definition">
-        <put-attribute name="body" value="/views/allCars.jsp"/>
-        <put-attribute name="title" value="allCars"/>
+    <definition name="autoType-*" extends="base.definition">
+        <put-attribute name="body" value="/views/{1}.jsp"/>
+        <put-attribute name="title" value="{1} auto type"/>
     </definition>
 
-    <definition name="newCar" extends="base.definition">
-        <put-attribute name="body" value="/views/newCar.jsp"/>
-        <put-attribute name="title" value="newCar"/>
+    <definition name="car-*" extends="base.definition">
+        <put-attribute name="body" value="/views/{1}.jsp"/>
+        <put-attribute name="title" value="{1} car"/>
     </definition>
 
-    <definition name="findByModel" extends="base.definition">
-        <put-attribute name="body" value="/views/findByModel.jsp"/>
-        <put-attribute name="title" value="findByModel"/>
+    <definition name="financing-*" extends="base.definition">
+        <put-attribute name="body" value="/views/{1}.jsp"/>
+        <put-attribute name="title" value="{1} financing"/>
+    </definition>
+
+    <definition name="myOrder-*" extends="base.definition">
+        <put-attribute name="body" value="/views/{1}.jsp"/>
+        <put-attribute name="title" value="{1} my order"/>
+    </definition>
+
+    <definition name="partsAndAccessories-*" extends="base.definition">
+        <put-attribute name="body" value="/views/{1}.jsp"/>
+        <put-attribute name="title" value="{1} parts and accessories"/>
+    </definition>
+
+    <definition name="techSupport-*" extends="base.definition">
+        <put-attribute name="body" value="/views/{1}.jsp"/>
+        <put-attribute name="title" value="{1} techSupport"/>
+    </definition>
+
+    <definition name="user-*" extends="base.definition">
+        <put-attribute name="body" value="/views/{1}.jsp"/>
+        <put-attribute name="title" value="{1} user"/>
     </definition>
 
     <definition name="home" extends="base.definition">

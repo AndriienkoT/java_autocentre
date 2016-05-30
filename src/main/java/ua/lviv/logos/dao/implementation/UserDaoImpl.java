@@ -44,7 +44,7 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Transactional
-    public List<User> findByPhone(String phone) {
-        return entityManager.createNamedQuery("User.findByPhone", User.class).setParameter("phone", phone).getResultList();
+    public List<User> findByLogin(String login) {
+        return entityManager.createNamedQuery("User.findByLogin", User.class).setParameter("login", login).getResultList();
     }
 }

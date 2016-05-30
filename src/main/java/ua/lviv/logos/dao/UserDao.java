@@ -18,5 +18,5 @@ public interface UserDao {
 
     public List<User> findAll();
 
-    public List<User> findByPhone(String phone);
+    public List<User> findByLogin(String login);
 }

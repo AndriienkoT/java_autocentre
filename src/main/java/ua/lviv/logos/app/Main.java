@@ -31,8 +31,8 @@ public class Main {
         entityManager.persist(new TechSupport("TO 1", 1000));
         entityManager.persist(new TechSupport("TO 2", 2100));
 
-        entityManager.persist(new User("Denis", "Markov", "markov.d@gmail.com", "0972543265"));
-        entityManager.persist(new User("Kostya", "Stem", "stem.k@gmail.com", "09612345147"));
+        entityManager.persist(new User("Denis", "Markov", "markov.d@gmail.com", "0972543265", "markov"));
+        entityManager.persist(new User("Kostya", "Stem", "stem.k@gmail.com", "09612345147", "stem"));
 */
         entityManager.getTransaction().commit();
         entityManager.close();

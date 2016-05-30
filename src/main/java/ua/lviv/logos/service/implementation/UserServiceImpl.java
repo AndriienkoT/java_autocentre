@@ -19,13 +19,13 @@ public class UserServiceImpl implements UserService {
     private UserDao userDao;
 
     @Transactional
-    public void add(String name, String surname, String email, String phone) {
-        User user = new User(name, surname, email, phone);
+    public void add(String name, String surname, String email, String phone, String password) {
+        User user = new User(name, surname, email, phone, password);
         userDao.add(user);
     }
 
     @Transactional
-    public void edit(int id, String name, String surname, String email, String phone) {
+    public void edit(int id, String name, String surname, String email, String phone, String password) {
         User user = userDao.findById(id);
         if(name!=null){
             user.setName(name);
@@ -38,6 +38,9 @@ public class UserServiceImpl implements UserService {
         }
         if(phone!=null){
             user.setPhone(phone);
+        }
+        if(phone!=null){
+            user.setPassword(password);
         }
         userDao.edit(user);
     }
@@ -59,7 +62,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Transactional
-    public List<User> findByPhone(String phone) {
-        return userDao.findByPhone(phone);
+    public List<User> findByLogin(String login) {
+        return userDao.findByLogin(login);
     }
 }

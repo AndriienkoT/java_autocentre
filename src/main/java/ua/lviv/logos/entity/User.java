@@ -8,7 +8,7 @@ import java.util.List;
  */
 @Entity
 @NamedQueries({
-        @NamedQuery(name = "User.findByPhone", query = "SELECT u FROM User u where u.phone like :phone")
+        @NamedQuery(name = "User.findByLogin", query = "SELECT u FROM User u where u.phone like :phone or u.email like :email")
 })
 public class User {
     @Id
@@ -23,6 +23,8 @@ public class User {
     private String email;
     @Column
     private String phone;
+    @Column
+    private String password;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
     private List<MyOrder> myOrderList;
@@ -30,11 +32,12 @@ public class User {
     public User() {
     }
 
-    public User(String name, String surname, String email, String phone) {
+    public User(String name, String surname, String email, String phone, String password) {
         this.name = name;
         this.surname = surname;
         this.email = email;
         this.phone = phone;
+        this.password = password;
     }
 
     public int getId() {
@@ -75,6 +78,14 @@ public class User {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public List<MyOrder> getMyOrderList() {

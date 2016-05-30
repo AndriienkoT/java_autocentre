@@ -8,9 +8,9 @@ import java.util.List;
  * Created by user on 27/05/2016.
  */
 public interface UserService {
-    public void add(String name, String surname, String email, String phone);
+    public void add(String name, String surname, String email, String phone, String password);
 
-    public void edit(int id, String name, String surname, String email, String phone);
+    public void edit(int id, String name, String surname, String email, String phone, String password);
 
     public void delete(int id);
 
@@ -18,5 +18,5 @@ public interface UserService {
 
     public List<User> findAll();
 
-    public List<User> findByPhone(String phone);
+    public List<User> findByLogin(String login);
 }
