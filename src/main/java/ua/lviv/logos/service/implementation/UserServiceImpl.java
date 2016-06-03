@@ -65,4 +65,9 @@ public class UserServiceImpl implements UserService {
     public List<User> findByLogin(String login) {
         return userDao.findByLogin(login);
     }
+
+    @Transactional
+    public List<User> findBySurname(String surname) {
+        return userDao.findBySurname(surname);
+    }
 }

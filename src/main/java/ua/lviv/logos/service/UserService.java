@@ -19,4 +19,6 @@ public interface UserService {
     public List<User> findAll();
 
     public List<User> findByLogin(String login);
+
+    public List<User> findBySurname(String surname);
 }

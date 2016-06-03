@@ -10,6 +10,7 @@ import java.util.List;
  */
 @Entity
 @NamedQueries({
+        @NamedQuery(name = "MyOrder.findByOrderDate", query = "SELECT o FROM MyOrder o where o.order_date like :order_date"),
         @NamedQuery(name = "MyOrder.findByCustomer", query = "SELECT o FROM MyOrder o where o.customer like :customer")
 })
 public class MyOrder {

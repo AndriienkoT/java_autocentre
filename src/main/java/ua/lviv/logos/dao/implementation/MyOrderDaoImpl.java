@@ -7,6 +7,7 @@ import ua.lviv.logos.entity.MyOrder;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -46,5 +47,10 @@ public class MyOrderDaoImpl implements MyOrderDao {
     @Transactional
     public List<MyOrder> findByCustomer(String customer) {
         return entityManager.createNamedQuery("MyOrder.findByCustomer", MyOrder.class).setParameter("customer", customer).getResultList();
+    }
+
+    @Transactional
+    public List<MyOrder> findByOrderDate(Date order_date) {
+        return entityManager.createNamedQuery("MyOrder.findByOrderDate", MyOrder.class).setParameter("order_date", order_date).getResultList();
     }
 }

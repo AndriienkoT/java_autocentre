@@ -8,6 +8,7 @@ import ua.lviv.logos.entity.MyOrder;
 import ua.lviv.logos.entity.User;
 import ua.lviv.logos.service.MyOrderService;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -85,5 +86,10 @@ public class MyOrderServiceImpl implements MyOrderService {
     @Override
     public List<MyOrder> findByCustomer(String customer) {
         return myOrderDao.findByCustomer(customer);
+    }
+
+    @Override
+    public List<MyOrder> findByOrderDate(Date order_date) {
+        return myOrderDao.findByOrderDate(order_date);
     }
 }

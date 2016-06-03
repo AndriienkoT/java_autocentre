@@ -2,6 +2,7 @@ package ua.lviv.logos.dao;
 
 import ua.lviv.logos.entity.MyOrder;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -19,4 +20,6 @@ public interface MyOrderDao {
     public List<MyOrder> findAll();
 
     public List<MyOrder> findByCustomer(String customer);
+
+    public List<MyOrder> findByOrderDate(Date order_date);
 }

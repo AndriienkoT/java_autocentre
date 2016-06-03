@@ -8,6 +8,7 @@ import java.util.List;
  */
 @Entity
 @NamedQueries({
+        @NamedQuery(name = "User.findBySurname", query = "SELECT u FROM User u where u.surname like :surname"),
         @NamedQuery(name = "User.findByLogin", query = "SELECT u FROM User u where u.phone like :phone or u.email like :email")
 })
 public class User {

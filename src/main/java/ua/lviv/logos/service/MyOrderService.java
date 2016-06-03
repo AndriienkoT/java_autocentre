@@ -2,6 +2,7 @@ package ua.lviv.logos.service;
 
 import ua.lviv.logos.entity.MyOrder;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -21,4 +22,6 @@ public interface MyOrderService {
     public List<MyOrder> findAll();
 
     public List<MyOrder> findByCustomer(String customer);
+
+    public List<MyOrder> findByOrderDate(Date order_date);
 }

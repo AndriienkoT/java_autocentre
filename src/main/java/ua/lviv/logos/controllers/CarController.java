@@ -20,6 +20,13 @@ public class CarController {
     @Autowired
     private CarService carService;
 
+    @RequestMapping(value = "/showAllCars", method = RequestMethod.GET)
+    public String showAllCars(Model model){
+        List<Car> carList = carService.findAll();
+        model.addAttribute("cars", carList);
+        return "car-all";
+    }
+
     @RequestMapping(value = "/newCar", method = RequestMethod.GET)
     public String newCar(Model model){
         return "car-new";
@@ -36,9 +43,9 @@ public class CarController {
         return "car-findByModel";
     }
 
-    @RequestMapping(value = "/findByModel", method = RequestMethod.POST)
-    public List<Car> findByModel(@RequestParam(value = "model") String model){
-        List<Car> cars =  carService.findByModel(model);
-        return cars;
+    @RequestMapping(value = "/findCarByModel", method = RequestMethod.POST)
+    public String findCarByModel(@RequestParam(value = "model") String model){
+        carService.findByModel(model);
+        return "redirect:/findByModel";
     }
 }
