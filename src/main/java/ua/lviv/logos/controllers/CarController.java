@@ -20,6 +20,11 @@ public class CarController {
     @Autowired
     private CarService carService;
 
+    @RequestMapping(value = "/car-range", method = RequestMethod.GET)
+    public String carRange(){
+        return "car-range";
+    }
+
     @RequestMapping(value = "/showAllCars", method = RequestMethod.GET)
     public String showAllCars(Model model){
         List<Car> carList = carService.findAll();
@@ -44,8 +49,44 @@ public class CarController {
     }
 
     @RequestMapping(value = "/findCarByModel", method = RequestMethod.POST)
-    public String findCarByModel(@RequestParam(value = "model") String model){
-        carService.findByModel(model);
-        return "redirect:/findByModel";
+    public String findCarByModel(Model model, @RequestParam(value = "model") String model1){
+        List<Car> carList = carService.findByModel(model1);
+        model.addAttribute("cars", carList);
+        return "car-findByModel";
+    }
+
+    @RequestMapping(value = "/findByEngineVolume", method = RequestMethod.GET)
+    public String findByEngineVolume(Model model){
+        return "car-findByEngineVolume";
+    }
+
+    @RequestMapping(value = "/findCarByEngineVolume", method = RequestMethod.POST)
+    public String findCarByEngineVolume(Model model, @RequestParam(value = "engine_volume") double engine_volume){
+        List<Car> carList = carService.findByEngineVolume(engine_volume);
+        model.addAttribute("cars", carList);
+        return "car-findByEngineVolume";
+    }
+
+    @RequestMapping(value = "/findByYearOfIssue", method = RequestMethod.GET)
+    public String findByYearOfIssue(Model model){
+        return "car-findByYearOfIssue";
+    }
+
+    @RequestMapping(value = "/findCarByYearOfIssue", method = RequestMethod.POST)
+    public String findCarByYearOfIssue(Model model, @RequestParam(value = "year_of_issue") int year_of_issue){
+        List<Car> carList = carService.findByYearOfIssue(year_of_issue);
+        model.addAttribute("cars", carList);
+        return "car-findByYearOfIssue";
+    }
+
+    @RequestMapping(value = "/deleteCar", method = RequestMethod.GET)
+    public String deleteCar(Model model){
+        return "car-delete";
+    }
+
+    @RequestMapping(value = "/deleteCarById", method = RequestMethod.POST)
+    public String deleteCarById(@RequestParam(value = "id") int id){
+        carService.delete(id);
+        return "redirect:/showAllCars";
     }
 }

@@ -11,10 +11,6 @@
     <title></title>
 </head>
 <body>
-    <?php
-        date_default_timezone_set("Europe/Kiev");
-        echo "Час покупки: ".date("H:i")."<br>";
-    ?>
-    © 01.01.2015-<?php echo date ("d.m.Y"); echo "<br>" ?>
+    <div>Copyright © 2016</div>
 </body>
 </html>

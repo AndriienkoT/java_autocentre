@@ -5,44 +5,43 @@
 <tiles-definitions>
     <definition name="base.definition" template="/views/tiles/layout.jsp">
         <put-attribute name="header" value="/views/tiles/header.jsp"/>
-        <put-attribute name="menu" value="/views/tiles/menu.jsp"/>
         <put-attribute name="body" value=""/>
         <put-attribute name="footer" value="/views/tiles/footer.jsp"/>
     </definition>
 
     <definition name="autoType-*" extends="base.definition">
-        <put-attribute name="body" value="/views/{1}.jsp"/>
-        <put-attribute name="title" value="{1} auto type"/>
+        <put-attribute name="body" value="/views/autoType-{1}.jsp"/>
+        <put-attribute name="title" value="autoType-{1}"/>
     </definition>
 
     <definition name="car-*" extends="base.definition">
-        <put-attribute name="body" value="/views/{1}.jsp"/>
-        <put-attribute name="title" value="{1} car"/>
+        <put-attribute name="body" value="/views/car-{1}.jsp"/>
+        <put-attribute name="title" value="car-{1}"/>
     </definition>
 
     <definition name="financing-*" extends="base.definition">
-        <put-attribute name="body" value="/views/{1}.jsp"/>
-        <put-attribute name="title" value="{1} financing"/>
+        <put-attribute name="body" value="/views/financing-{1}.jsp"/>
+        <put-attribute name="title" value="financing-{1}"/>
     </definition>
 
     <definition name="myOrder-*" extends="base.definition">
-        <put-attribute name="body" value="/views/{1}.jsp"/>
-        <put-attribute name="title" value="{1} my order"/>
+        <put-attribute name="body" value="/views/myOrder-{1}.jsp"/>
+        <put-attribute name="title" value="myOrder-{1}"/>
     </definition>
 
     <definition name="partsAndAccessories-*" extends="base.definition">
-        <put-attribute name="body" value="/views/{1}.jsp"/>
-        <put-attribute name="title" value="{1} parts and accessories"/>
+        <put-attribute name="body" value="/views/partsAndAccessories-{1}.jsp"/>
+        <put-attribute name="title" value="partsAndAccessories-{1}"/>
     </definition>
 
     <definition name="techSupport-*" extends="base.definition">
-        <put-attribute name="body" value="/views/{1}.jsp"/>
-        <put-attribute name="title" value="{1} techSupport"/>
+        <put-attribute name="body" value="/views/techSupport-{1}.jsp"/>
+        <put-attribute name="title" value="techSupport-{1}"/>
     </definition>
 
     <definition name="user-*" extends="base.definition">
-        <put-attribute name="body" value="/views/{1}.jsp"/>
-        <put-attribute name="title" value="{1} user"/>
+        <put-attribute name="body" value="/views/user-{1}.jsp"/>
+        <put-attribute name="title" value="user-{1}"/>
     </definition>
 
     <definition name="home" extends="base.definition">

@@ -11,7 +11,7 @@
     <title>Home</title>
 </head>
 <body>
-
+    <h2>Information about carcenter</h2>
 
 </body>
 </html>

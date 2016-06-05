@@ -1,5 +1,18 @@
 *
-.myClass
+.headerClass
 {
-    background-color: dodgerblue;
+    margin-top: 10px;
+}
+
+
+.bodyClass
+{
+
+}
+
+.footerClass
+{
+    position: fixed;
+    padding: 15px 0px;
+    background: rgba(87, 132, 133, 0.5);
 }

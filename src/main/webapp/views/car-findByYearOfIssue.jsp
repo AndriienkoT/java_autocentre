@@ -1,20 +1,25 @@
 <%--
   Created by IntelliJ IDEA.
   User: user
-  Date: 27/05/2016
-  Time: 19:58
+  Date: 05/06/2016
+  Time: 18:17
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <html>
 <head>
-    <title>All cars</title>
+    <title>Find car by year of issue</title>
 </head>
 <body>
-<h2>All Cars</h2>
-<table>
+<h2>Input data:</h2>
+<form action="/findCarByYearOfIssue" method="post">
+    Year of issue <input type="text" name="year_of_issue">
+    <button type="submit">Find</button>
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+</form>
+
+<table class="table table-hover">
     <thead>
     <tr>
         <th>Car model</th>
@@ -40,7 +45,5 @@
     </c:forEach>
     </tbody>
 </table>
-<sec:authorize access="hasRole('ROLE_ADMIN')"><a href="/newCar">Create new car</a></sec:authorize>
 </body>
 </html>
-

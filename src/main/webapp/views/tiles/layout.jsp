@@ -11,16 +11,18 @@
 <html>
 <head>
     <title><tiles:getAsString name="title"/></title>
+    <link rel="stylesheet" href=<c:url value="/resources/css/bootstrap.min.css"></c:url>>
+    <link rel="stylesheet" href=<c:url value="/resources/css/bootstrap-theme.min.css"></c:url>>
     <link rel="stylesheet" href=<c:url value="/resources/css/style.css"></c:url>/>
 </head>
 <body>
-<div>
+<div class="headerClass">
     <tiles:insertAttribute name="header"/>
 </div>
-<div class="myClass">
+<div class="bodyClass">
     <tiles:insertAttribute name="body"/>
 </div>
-<div>
+<div class="footerClass">
     <tiles:insertAttribute name="footer"/>
 </div>
 </body>
