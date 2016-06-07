@@ -6,7 +6,7 @@
         <class>ua.lviv.logos.entity.PartsAndAccessories</class>
         <class>ua.lviv.logos.entity.TechSupport</class>
         <class>ua.lviv.logos.entity.Financing</class>
-        <class>ua.lviv.logos.entity.User</class>
+        <class>ua.lviv.logos.entity.Users</class>
         <class>ua.lviv.logos.entity.MyOrder</class>
         <properties>
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>

@@ -12,7 +12,7 @@
     <title>Delete car</title>
 </head>
 <body>
-    <h2>Input data:</h2>
+    <h4>Input data:</h4>
     <form action="/deleteCarById" method="post">
         Id <input type="text" name="id">
         <button type="submit">Delete</button>

@@ -12,7 +12,7 @@
     <title>Find car by model</title>
 </head>
 <body>
-<h2>Input data:</h2>
+<h4>Input data:</h4>
 <form action="/findCarByModel" method="post">
     Model <input type="text" name="model">
     <button type="submit">Find</button>

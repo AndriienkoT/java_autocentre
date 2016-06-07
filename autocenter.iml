@@ -104,5 +104,6 @@
     <orderEntry type="library" name="Maven: org.springframework.data:spring-data-jpa:1.9.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.data:spring-data-commons:1.11.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.aspectj:aspectjrt:1.8.7" level="project" />
+    <orderEntry type="library" name="css" level="project" />
   </component>
 </module>

@@ -12,7 +12,7 @@
     <title>All financing types</title>
 </head>
 <body>
-<h2>All financing types</h2>
+<h3>All financing types</h3>
 <table class="table table-hover">
     <thead>
     <tr>

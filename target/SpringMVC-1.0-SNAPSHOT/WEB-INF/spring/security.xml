@@ -7,21 +7,31 @@
 
 
     <http use-expressions="true">
-
+        <intercept-url pattern="/new*" access="hasRole('ROLE_ADMIN')"/>
         <logout logout-url="/logout" logout-success-url="/" />
-        <form-login  />
+        <form-login login-page="/loginpage" login-processing-url="/loginprocessing" />
+        <csrf disabled="true"/>
     </http>
+
+
 
     <global-method-security secured-annotations="enabled" />
     <authentication-manager>
+
         <authentication-provider>
             <user-service>
                 <user name="admin" password="admin" authorities="ROLE_ADMIN" />
-                <user name="tanya" password="tanya" authorities="ROLE_USER" />
+                <user name="tanya" password="tanya" authorities="ROLE_USER"/>
             </user-service>
+        </authentication-provider>
+
+        <authentication-provider user-service-ref="usersDetailsService">
+            <password-encoder ref="encoder"/>
         </authentication-provider>
 
     </authentication-manager>
 
     <beans:import resource="classpath:/META-INF/AppContext.xml" />
+
+
 </beans:beans>

@@ -24,4 +24,8 @@ public interface MyOrderService {
     public List<MyOrder> findByCustomer(String customer);
 
     public List<MyOrder> findByOrderDate(Date order_date);
+
+    public List<MyOrder> findByAuto(String auto);
+
+    public List<MyOrder> findByFinType(String fin_type);
 }

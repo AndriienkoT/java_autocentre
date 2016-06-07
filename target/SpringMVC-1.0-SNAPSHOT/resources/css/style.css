@@ -1,18 +1,15 @@
 *
-.headerClass
-{
-    margin-top: 10px;
+.bodyClass {
+    min-height: 600px;
 }
-
-
-.bodyClass
-{
-
-}
-
-.footerClass
-{
+.footerClass {
     position: fixed;
-    padding: 15px 0px;
-    background: rgba(87, 132, 133, 0.5);
+    padding-bottom: 0px;
+    background: rgba(0, 34, 79, 0.9);
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+    text-align: center;
+    font-size: 1.1em;
+    color: black;
 }

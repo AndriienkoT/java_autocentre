@@ -11,19 +11,19 @@
 <html>
 <head>
     <title><tiles:getAsString name="title"/></title>
-    <link rel="stylesheet" href=<c:url value="/resources/css/bootstrap.min.css"></c:url>>
-    <link rel="stylesheet" href=<c:url value="/resources/css/bootstrap-theme.min.css"></c:url>>
-    <link rel="stylesheet" href=<c:url value="/resources/css/style.css"></c:url>/>
+    <link rel="stylesheet" href="/resources/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/resources/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="/resources/css/style.css" />
 </head>
 <body>
-<div class="headerClass">
-    <tiles:insertAttribute name="header"/>
-</div>
-<div class="bodyClass">
-    <tiles:insertAttribute name="body"/>
-</div>
-<div class="footerClass">
-    <tiles:insertAttribute name="footer"/>
-</div>
+    <div>
+        <tiles:insertAttribute name="header"/>
+    </div>
+    <div class="bodyClass">
+        <tiles:insertAttribute name="body"/>
+    </div>
+    <div class="footerClass">
+        <tiles:insertAttribute name="footer"/>
+    </div>
 </body>
 </html>

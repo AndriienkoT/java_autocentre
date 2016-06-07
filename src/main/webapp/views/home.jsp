@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: user
@@ -11,7 +12,7 @@
     <title>Home</title>
 </head>
 <body>
-    <h2>Information about carcenter</h2>
+    <h3>Information about carcenter</h3>
 
 </body>
 </html>

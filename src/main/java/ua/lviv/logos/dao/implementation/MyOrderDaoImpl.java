@@ -53,4 +53,14 @@ public class MyOrderDaoImpl implements MyOrderDao {
     public List<MyOrder> findByOrderDate(Date order_date) {
         return entityManager.createNamedQuery("MyOrder.findByOrderDate", MyOrder.class).setParameter("order_date", order_date).getResultList();
     }
+
+    @Transactional
+    public List<MyOrder> findByAuto(String auto) {
+        return entityManager.createNamedQuery("MyOrder.findByAuto", MyOrder.class).setParameter("auto", auto).getResultList();
+    }
+
+    @Transactional
+    public List<MyOrder> findByFinType(String fin_type) {
+        return entityManager.createNamedQuery("MyOrder.findByFinType", MyOrder.class).setParameter("fin_type", fin_type).getResultList();
+    }
 }

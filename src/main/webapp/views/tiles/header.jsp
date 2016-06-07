@@ -12,14 +12,20 @@
     <title></title>
 </head>
 <body>
-    <sec:authorize access="isAnonymous()"> <a href="/login">Login</a></sec:authorize>
-    <sec:authorize access="isAuthenticated()"> Hello, <sec:authentication property="name" /> <a href="/logout">Logout</a></sec:authorize>
+    <a href="#">Logo                               </a>
 
-    <div><a href="/home">Home</a></div>
-    <div><a href="/car-range">Car range</a></div>
-    <div><a href="/financing-main">Financing</a></div>
-    <div><a href="/order">Order</a></div>
-    <div><a href="/partsAndAccessories">Parts and accessories</a></div>
-    <div><a href="/techSupport">Technical support</a></div>
+    <div class="btn-group">
+        <a href="/home" class="btn btn-default active" role="button">Home</a>
+        <a href="/car-range" class="btn btn-default active" role="button">Financing</a>
+        <a href="/financing-main" class="btn btn-default active" role="button">Car range</a>
+        <a href="/myOrder-main" class="btn btn-default active" role="button">Order</a>
+        <a href="/partsAndAccessories-main" class="btn btn-default active" role="button">Parts and accessories</a>
+        <a href="/techSupport-main" class="btn btn-default active" role="button">Technical support</a>
+    </div>
+
+    <sec:authorize access="isAnonymous()"> <a  class="btn btn-primary" href="/loginpage">Login</a></sec:authorize>
+    <sec:authorize access="isAuthenticated()"> Hello, <a href="/myCabinet=${loginedUser.id}">${loginedUser.name}</a> <a  class="btn btn-primary" href="/logout">Logout</a></sec:authorize>
+    <a class="btn btn-primary" href="/registration">Registration</a>
+
 </body>
 </html>

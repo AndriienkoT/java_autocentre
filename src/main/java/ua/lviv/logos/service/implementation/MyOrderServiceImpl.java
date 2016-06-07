@@ -3,9 +3,9 @@ package ua.lviv.logos.service.implementation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ua.lviv.logos.dao.MyOrderDao;
-import ua.lviv.logos.dao.UserDao;
+import ua.lviv.logos.dao.UsersDao;
 import ua.lviv.logos.entity.MyOrder;
-import ua.lviv.logos.entity.User;
+import ua.lviv.logos.entity.Users;
 import ua.lviv.logos.service.MyOrderService;
 
 import java.util.Date;
@@ -21,7 +21,7 @@ public class MyOrderServiceImpl implements MyOrderService {
     private MyOrderDao myOrderDao;
 
     @Autowired
-    private UserDao userDao;
+    private UsersDao usersDao;
 
     @Override
     public void add(String customer, String auto, double price, String fin_type) {
@@ -62,8 +62,8 @@ public class MyOrderServiceImpl implements MyOrderService {
         if(fin_type!=null){
             myOrder.setFin_type(fin_type);
         }
-        User user = userDao.findById(user_id);
-        myOrder.setUser(user);
+        Users users = usersDao.findById(id);
+        myOrder.setUsers(users);
         myOrderDao.edit(myOrder);
     }
 
@@ -91,5 +91,15 @@ public class MyOrderServiceImpl implements MyOrderService {
     @Override
     public List<MyOrder> findByOrderDate(Date order_date) {
         return myOrderDao.findByOrderDate(order_date);
+    }
+
+    @Override
+    public List<MyOrder> findByAuto(String auto) {
+        return myOrderDao.findByAuto(auto);
+    }
+
+    @Override
+    public List<MyOrder> findByFinType(String fin_type) {
+        return myOrderDao.findByFinType(fin_type);
     }
 }

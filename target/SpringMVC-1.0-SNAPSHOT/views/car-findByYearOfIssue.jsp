@@ -12,7 +12,7 @@
     <title>Find car by year of issue</title>
 </head>
 <body>
-<h2>Input data:</h2>
+<h4>Input data:</h4>
 <form action="/findCarByYearOfIssue" method="post">
     Year of issue <input type="text" name="year_of_issue">
     <button type="submit">Find</button>

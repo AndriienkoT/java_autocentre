@@ -12,7 +12,7 @@
     <title>All cars</title>
 </head>
 <body>
-<h2>All cars</h2>
+<h3>All cars</h3>
 <table class="table table-hover">
     <thead>
     <tr>

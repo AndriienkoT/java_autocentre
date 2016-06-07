@@ -12,7 +12,7 @@
     <title>Find financing conditions by type</title>
 </head>
 <body>
-<h2>Input data:</h2>
+<h4>Input data:</h4>
     <form action="/findFinancingByType" method="post">
         Financing type <input type="text" name="type">
         <button type="submit">Find</button>

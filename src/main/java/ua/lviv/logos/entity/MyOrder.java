@@ -11,7 +11,9 @@ import java.util.List;
 @Entity
 @NamedQueries({
         @NamedQuery(name = "MyOrder.findByOrderDate", query = "SELECT o FROM MyOrder o where o.order_date like :order_date"),
-        @NamedQuery(name = "MyOrder.findByCustomer", query = "SELECT o FROM MyOrder o where o.customer like :customer")
+        @NamedQuery(name = "MyOrder.findByCustomer", query = "SELECT o FROM MyOrder o where o.customer like :customer"),
+        @NamedQuery(name = "MyOrder.findByAuto", query = "SELECT o FROM MyOrder o where o.auto like :auto"),
+        @NamedQuery(name = "MyOrder.findByFinType", query = "SELECT o FROM MyOrder o where o.fin_type like :fin_type")
 })
 public class MyOrder {
     @Id
@@ -30,7 +32,7 @@ public class MyOrder {
     private String fin_type;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    private User user;
+    private Users users;
     @ManyToOne(fetch = FetchType.LAZY)
     private Financing financing;
     @ManyToMany(fetch = FetchType.LAZY)
@@ -96,12 +98,12 @@ public class MyOrder {
         this.fin_type = fin_type;
     }
 
-    public User getUser() {
-        return user;
+    public Users getUsers() {
+        return users;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUsers(Users users) {
+        this.users = users;
     }
 
     public Financing getFinancing() {

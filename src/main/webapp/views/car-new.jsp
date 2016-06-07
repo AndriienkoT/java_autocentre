@@ -13,7 +13,7 @@
     <title>New car</title>
 </head>
 <body>
-<h2>Input data:</h2>
+<h4>Input data:</h4>
     <form action="/createNewCar" method="post" >
         Model <input type="text" name="model">
         Equipment <input type="text" name="equipment">

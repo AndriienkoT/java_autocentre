@@ -12,7 +12,7 @@
     <title>Find car by engine volume</title>
 </head>
 <body>
-<h2>Input data:</h2>
+<h4>Input data:</h4>
 <form action="/findCarByEngineVolume" method="post">
     Engine volume <input type="text" name="engine_volume">
     <button type="submit">Find</button>
