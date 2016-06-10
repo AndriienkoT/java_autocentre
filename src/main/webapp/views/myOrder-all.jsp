@@ -13,7 +13,7 @@
 </head>
 <body>
     <h3>All orders</h3>
-    <table class="table table-hover">
+    <table class="table table-hover table-bordered table-condensed">
         <thead>
         <tr>
             <th>Order date</th>

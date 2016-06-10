@@ -21,11 +21,6 @@ public class MyOrderController {
     @Autowired
     private MyOrderService myOrderService;
 
-    @RequestMapping(value = "/myOrder-main", method = RequestMethod.GET)
-    public String myOrderMain(){
-        return "myOrder-main";
-    }
-
     @RequestMapping(value = "/showAllOrders", method = RequestMethod.GET)
     public String showAllOrders(Model model){
         List<MyOrder> myOrderList = myOrderService.findAll();

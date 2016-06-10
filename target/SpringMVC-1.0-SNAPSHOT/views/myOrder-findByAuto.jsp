@@ -12,14 +12,21 @@
     <title>Find order by auto</title>
 </head>
 <body>
-    <h4>Input data:</h4>
-    <form action="/findOrderByAuto" method="post">
-        Auto <input type="text" name="auto">
-        <button type="submit">Find</button>
-        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+    <form class="form-horizontal" action="/findOrderByAuto" method="post" role="form">
+        <div class="form-group">
+            <label class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="Auto" name="auto">
+            </div>
+        </div>
+        <div  class="form-group">
+            <div class="col-sm-1 col-sm-10">
+                <button type="submit" class="btn btn-default">Find</button>
+            </div>
+        </div>
     </form>
 
-    <table class="table table-hover">
+    <table class="table table-hover table-bordered table-condensed">
         <thead>
         <tr>
             <th>Order date</th>

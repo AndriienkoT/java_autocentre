@@ -12,20 +12,81 @@
     <title></title>
 </head>
 <body>
-    <a href="#">Logo                               </a>
-
-    <div class="btn-group">
-        <a href="/home" class="btn btn-default active" role="button">Home</a>
-        <a href="/car-range" class="btn btn-default active" role="button">Financing</a>
-        <a href="/financing-main" class="btn btn-default active" role="button">Car range</a>
-        <a href="/myOrder-main" class="btn btn-default active" role="button">Order</a>
-        <a href="/partsAndAccessories-main" class="btn btn-default active" role="button">Parts and accessories</a>
-        <a href="/techSupport-main" class="btn btn-default active" role="button">Technical support</a>
+    <div class="row">
+        <div class="col-md-2">
+            <span class="logo">AUDI-SOUL</span>
+        </div>
+        <div class="col-md-6">
+            <div class="btn-group">
+                <a href="/home" class="btn btn-default active" role="button">Home</a>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        Car range<span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="/showAllCars">All cars</a></li>
+                        <li><sec:authorize access="hasRole('ROLE_ADMIN')"><a href="/newCar">Create new car</a></sec:authorize></li>
+                        <li><a href=/findByModel>Find car by model</a></li>
+                        <li><a href=/findByEngineVolume>Find car by engine volume</a></li>
+                        <li><a href=/findByYearOfIssue>Find car by year of issue</a></li>
+                        <li><sec:authorize access="hasRole('ROLE_ADMIN')"><a href="/deleteCar">Delete car</a></sec:authorize></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        Financing<span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href=/showAllFinancingTypes>All financing types</a></li>
+                        <li><a href=/findByType>Find financing conditions by type</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        Order<span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href=/showAllOrders>All order</a></li>
+                        <li><sec:authorize access="hasRole('ROLE_ADMIN')"><a href="/newOrder">Create new order</a></sec:authorize></li>
+                        <li><a href=/findByCustomer>Find order by customer</a></li>
+                        <li><a href=/findByOrderDate>Find order by order date</a></li>
+                        <li><a href=/findByAuto>Find order by auto</a></li>
+                        <li><a href=/findByFinType>Find order by financing type</a></li>
+                        <li><sec:authorize access="hasRole('ROLE_ADMIN')"><a href="/deleteOrder">Delete order</a></sec:authorize></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        Parts and accessories<span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href=/showAllPartsAndAccessories>All parts and accessories</a></li>
+                        <li><sec:authorize access="hasRole('ROLE_ADMIN')"><a href="/newPartsAndAccessories">Create new part or accessory</a></sec:authorize></li>
+                        <li><a href=/findByName>Find parts and accessories by name</a></li>
+                        <li><sec:authorize access="hasRole('ROLE_ADMIN')"><a href="/deletePartsAndAccessories">Delete part or accessory</a></sec:authorize></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        Technical support<span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href=/showAllTechSupport>All technical support</a></li>
+                        <li><sec:authorize access="hasRole('ROLE_ADMIN')"><a href="/newTechSupport">Create new technical support</a></sec:authorize></li>
+                        <li><a href=/findBySupportType>Find support type</a></li>
+                        <li><sec:authorize access="hasRole('ROLE_ADMIN')"><a href="/deleteTechSupport">Delete technical support</a></sec:authorize></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1">
+            <a> </a>
+        </div>
+        <div class="col-md-3">
+            <sec:authorize access="isAnonymous()"> <a  class="btn btn-danger" href="/loginpage" >Login</a></sec:authorize>
+            <sec:authorize access="isAuthenticated()"> Hello, <a href="/myCabinet=${loginedUser.id}">${loginedUser.name}</a> <a  class="btn btn-danger" href="/logout">Logout</a></sec:authorize>
+            <a class="btn btn-danger" href="/registration">Registration</a>
+        </div>
     </div>
-
-    <sec:authorize access="isAnonymous()"> <a  class="btn btn-primary" href="/loginpage">Login</a></sec:authorize>
-    <sec:authorize access="isAuthenticated()"> Hello, <a href="/myCabinet=${loginedUser.id}">${loginedUser.name}</a> <a  class="btn btn-primary" href="/logout">Logout</a></sec:authorize>
-    <a class="btn btn-primary" href="/registration">Registration</a>
-
 </body>
 </html>

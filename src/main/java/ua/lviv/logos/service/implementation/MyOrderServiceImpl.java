@@ -62,7 +62,7 @@ public class MyOrderServiceImpl implements MyOrderService {
         if(fin_type!=null){
             myOrder.setFin_type(fin_type);
         }
-        Users users = usersDao.findById(id);
+        Users users = usersDao.findById(user_id);
         myOrder.setUsers(users);
         myOrderDao.edit(myOrder);
     }
@@ -102,4 +102,7 @@ public class MyOrderServiceImpl implements MyOrderService {
     public List<MyOrder> findByFinType(String fin_type) {
         return myOrderDao.findByFinType(fin_type);
     }
+
+    @Override
+    public List<MyOrder> findAllOrdersByUserId(int id){ return myOrderDao.findAllOrdersByUserId(id); }
 }

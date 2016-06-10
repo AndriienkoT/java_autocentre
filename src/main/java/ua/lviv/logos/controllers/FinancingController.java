@@ -20,11 +20,6 @@ public class FinancingController {
     @Autowired
     private FinancingService financingService;
 
-    @RequestMapping(value = "/financing-main", method = RequestMethod.GET)
-    public String financingMain(){
-        return "financing-main";
-    }
-
     @RequestMapping(value = "/showAllFinancingTypes", method = RequestMethod.GET)
     public String showAllFinancingTypes(Model model){
         List<Financing> financingList = financingService.findAll();

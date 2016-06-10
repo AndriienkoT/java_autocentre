@@ -11,6 +11,12 @@
     <title></title>
 </head>
 <body>
-    <div>Copyright © 2016</div>
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container">
+            <div class="footer-inner">
+                <div>Copyright © 2016 andriienkot</div>
+            </div>
+        </div>
+    </nav>
 </body>
 </html>

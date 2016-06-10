@@ -63,4 +63,9 @@ public class MyOrderDaoImpl implements MyOrderDao {
     public List<MyOrder> findByFinType(String fin_type) {
         return entityManager.createNamedQuery("MyOrder.findByFinType", MyOrder.class).setParameter("fin_type", fin_type).getResultList();
     }
+
+    @Transactional
+    public List<MyOrder>findAllOrdersByUserId(int id){
+        return entityManager.createNamedQuery("MyOrder.findAllOrdersByUserId", MyOrder.class).setParameter("id", id).getResultList();
+    }
 }

@@ -1,5 +1,6 @@
 package ua.lviv.logos.dao;
 
+import ua.lviv.logos.dto.CarDTO;
 import ua.lviv.logos.entity.Car;
 
 import java.util.List;
@@ -16,7 +17,7 @@ public interface CarDao {
 
     public Car findById(int id);
 
-    public List<Car> findAll();
+    public List<CarDTO> findAll();
 
     public List<Car> findByModel(String model);
 

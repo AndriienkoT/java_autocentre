@@ -13,16 +13,18 @@
     <title><tiles:getAsString name="title"/></title>
     <link rel="stylesheet" href="/resources/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/resources/css/bootstrap-theme.min.css" />
+    <script src="/resources/jquery/jquery-2.2.4.min.js"></script>
+    <script src="/resources/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/resources/css/style.css" />
 </head>
 <body>
-    <div>
+    <div class="headerClass">
         <tiles:insertAttribute name="header"/>
     </div>
     <div class="bodyClass">
         <tiles:insertAttribute name="body"/>
     </div>
-    <div class="footerClass">
+    <div>
         <tiles:insertAttribute name="footer"/>
     </div>
 </body>

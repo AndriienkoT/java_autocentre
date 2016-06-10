@@ -7,18 +7,24 @@
     <title>Login</title>
 </head>
 <body>
-<div class="container">
-    <form class="form-horizontal" action="/loginprocessing" method="post">
+    <form class="form-horizontal" action="/loginprocessing" method="post" role="form">
         <div class="form-group">
-            Email or phone: <input class="form-control" id="inputEmail3" type="text" name="username">
+            <label class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="Email or phone" name="username">
+            </div>
         </div>
         <div  class="form-group">
-            Password <input class="form-control" id="inputEmail3" type="password" name="password">
+            <label class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control"  placeholder="Password" name="password">
+            </div>
         </div>
         <div  class="form-group">
-            <button type="submit"><span class="glyphicon glyphicon-log-in"></span> Submit</button>
+            <div class="col-sm-1 col-sm-10">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
         </div>
     </form>
-</div>
 </body>
 </html>

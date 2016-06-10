@@ -20,11 +20,6 @@ public class PartsAndAccessoriesController {
     @Autowired
     private PartsAndAccessoriesService partsAndAccessoriesService;
 
-    @RequestMapping(value = "/partsAndAccessories-main", method = RequestMethod.GET)
-    public String partsAndAccessoriesMain(){
-        return "partsAndAccessories-main";
-    }
-
     @RequestMapping(value = "/showAllPartsAndAccessories", method = RequestMethod.GET)
     public String showAllPartsAndAccessories(Model model){
         List<PartsAndAccessories> partsAndAccessoriesList = partsAndAccessoriesService.findAll();

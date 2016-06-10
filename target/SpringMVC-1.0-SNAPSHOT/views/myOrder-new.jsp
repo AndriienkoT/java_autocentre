@@ -13,15 +13,36 @@
     <title>New order</title>
 </head>
 <body>
-    <h4>Input data:</h4>
-    <form action="/createNewOrder" method="post" >
-        Customer <input type="text" name="customer">
-        Auto <input type="text" name="auto">
-        Price <input type="text" name="price">
-        Financing type <input type="text" name="fin_type">
-        <button type="submit">Create</button>
-        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+    <form class="form-horizontal" action="/createNewOrder" method="post" role="form">
+        <div  class="form-group">
+            <label for="inputCustomer" class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputCustomer" placeholder="Customer" name="customer">
+            </div>
+        </div>
+        <div  class="form-group">
+            <label for="inputAuto" class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputAuto" placeholder="Auto" name="auto">
+            </div>
+        </div>
+        <div  class="form-group">
+            <label for="inputPrice" class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputPrice" placeholder="Price" name="price">
+            </div>
+        </div>
+        <div  class="form-group">
+            <label for="inputFinancingType" class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputFinancingType" placeholder="Financing type" name="fin_type">
+            </div>
+        </div>
+        <div  class="form-group">
+            <div class="col-sm-1 col-sm-10">
+                <button type="submit" class="btn btn-default">Create</button>
+            </div>
+        </div>
     </form>
-
 </body>
 </html>

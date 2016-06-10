@@ -13,14 +13,30 @@
     <title>New part or accessory</title>
 </head>
 <body>
-<h4>Input data:</h4>
-    <form action="/createNewPartsAndAccessories" method="post" >
-        Name <input type="text" name="name">
-        Amount <input type="text" name="amount">
-        Price <input type="text" name="price">
-        <button type="submit">Create</button>
-        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+    <form class="form-horizontal" action="/createNewPartsAndAccessories" method="post" role="form">
+        <div  class="form-group">
+            <label for="inputName" class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputName" placeholder="Name" name="name">
+            </div>
+        </div>
+        <div  class="form-group">
+            <label for="inputAmount" class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputAmount" placeholder="Amount" name="amount">
+            </div>
+        </div>
+        <div  class="form-group">
+            <label for="inputPrice" class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputPrice" placeholder="Price" name="price">
+            </div>
+        </div>
+        <div  class="form-group">
+            <div class="col-sm-1 col-sm-10">
+                <button type="submit" class="btn btn-default">Create</button>
+            </div>
+        </div>
     </form>
-
 </body>
 </html>

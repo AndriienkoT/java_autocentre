@@ -12,14 +12,21 @@
     <title>Find order by customer</title>
 </head>
 <body>
-    <h4>Input data:</h4>
-    <form action="/findOrderByCustomer" method="post">
-        Customer <input type="text" name="customer">
-        <button type="submit">Find</button>
-        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+    <form class="form-horizontal" action="/findOrderByCustomer" method="post" role="form">
+        <div class="form-group">
+            <label class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="Customer" name="customer">
+            </div>
+        </div>
+        <div  class="form-group">
+            <div class="col-sm-1 col-sm-10">
+                <button type="submit" class="btn btn-default">Find</button>
+            </div>
+        </div>
     </form>
 
-    <table class="table table-hover">
+    <table class="table table-hover table-bordered table-condensed">
         <thead>
         <tr>
             <th>Order date</th>

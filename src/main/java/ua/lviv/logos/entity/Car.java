@@ -31,6 +31,9 @@ public class Car {
     private double mileage;
     @Column
     private double price;
+    @Column
+    @Lob
+    private byte[] picture;
 
     @ManyToOne(fetch = FetchType.LAZY)
     private AutoType autoType;
@@ -149,5 +152,13 @@ public class Car {
 
     public void setOrdeRList(List<MyOrder> myOrderList) {
         this.myOrderList = myOrderList;
+    }
+
+    public byte[] getPicture() {
+        return picture;
+    }
+
+    public void setPicture(byte[] picture) {
+        this.picture = picture;
     }
 }

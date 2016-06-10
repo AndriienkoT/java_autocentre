@@ -1,5 +1,7 @@
 package ua.lviv.logos.service;
 
+import org.springframework.web.multipart.MultipartFile;
+import ua.lviv.logos.dto.CarDTO;
 import ua.lviv.logos.entity.Car;
 
 import java.util.List;
@@ -9,7 +11,7 @@ import java.util.List;
  */
 public interface CarService {
 
-    public void add(String model, String equipment, double engine_volume, String engine_type, int year_of_issue, double mileage, double price);
+    public void add(String model, String equipment, double engine_volume, String engine_type, int year_of_issue, double mileage, double price, MultipartFile multipartFile);
 
     public void edit(int id, String model, String equipment, double engine_volume, String engine_type, int year_of_issue, double mileage, double price);
 
@@ -19,7 +21,7 @@ public interface CarService {
 
     public Car findById(int id);
 
-    public List<Car> findAll();
+    public List<CarDTO> findAll();
 
     public List<Car> findByModel(String model);
 

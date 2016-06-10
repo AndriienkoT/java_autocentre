@@ -3,6 +3,7 @@ package ua.lviv.logos.dao.implementation;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import ua.lviv.logos.dao.CarDao;
+import ua.lviv.logos.dto.CarDTO;
 import ua.lviv.logos.entity.Car;
 
 import javax.persistence.EntityManager;
@@ -39,7 +40,7 @@ public class CarDaoImpl implements CarDao {
     }
 
     @Transactional
-    public List<Car> findAll() {
+    public List<CarDTO> findAll() {
         return entityManager.createQuery("from Car ").getResultList();
     }
 

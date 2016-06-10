@@ -3,12 +3,15 @@ package ua.lviv.logos.service.implementation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
 import ua.lviv.logos.dao.AutoTypeDao;
 import ua.lviv.logos.dao.CarDao;
+import ua.lviv.logos.dto.CarDTO;
 import ua.lviv.logos.entity.AutoType;
 import ua.lviv.logos.entity.Car;
 import ua.lviv.logos.service.CarService;
 
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -26,6 +29,17 @@ public class CarServiceImpl implements CarService {
     @Transactional
     public void add(String model, String equipment, double engine_volume, String engine_type, int year_of_issue, double mileage, double price) {
         Car car = new Car(model, equipment, engine_volume, engine_type, year_of_issue, mileage, price);
+        carDao.add(car);
+    }
+
+    @Transactional
+    public void add(String model, String equipment, double engine_volume, String engine_type, int year_of_issue, double mileage, double price, MultipartFile multipartFile) {
+        Car car = new Car(model, equipment, engine_volume, engine_type, year_of_issue, mileage, price);
+        try {
+            car.setPicture(multipartFile.getBytes());
+        } catch (IOException e) {
+            car.setPicture(new byte[1]);
+        }
         carDao.add(car);
     }
 
@@ -97,7 +111,7 @@ public class CarServiceImpl implements CarService {
     }
 
     @Transactional
-    public List<Car> findAll() {
+    public List<CarDTO> findAll() {
         return carDao.findAll();
     }
 

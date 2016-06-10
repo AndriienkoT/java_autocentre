@@ -13,7 +13,8 @@ import java.util.List;
         @NamedQuery(name = "MyOrder.findByOrderDate", query = "SELECT o FROM MyOrder o where o.order_date like :order_date"),
         @NamedQuery(name = "MyOrder.findByCustomer", query = "SELECT o FROM MyOrder o where o.customer like :customer"),
         @NamedQuery(name = "MyOrder.findByAuto", query = "SELECT o FROM MyOrder o where o.auto like :auto"),
-        @NamedQuery(name = "MyOrder.findByFinType", query = "SELECT o FROM MyOrder o where o.fin_type like :fin_type")
+        @NamedQuery(name = "MyOrder.findByFinType", query = "SELECT o FROM MyOrder o where o.fin_type like :fin_type"),
+        @NamedQuery(name = "MyOrder.findAllOrdersByUserId", query = "SELECT o from MyOrder o where o.users.id = :id")
 })
 public class MyOrder {
     @Id

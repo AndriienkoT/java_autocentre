@@ -12,14 +12,21 @@
     <title>Find order by financing type</title>
 </head>
 <body>
-    <h4>Input data:</h4>
-    <form action="/findOrderByFinType" method="post">
-        Financing type <input type="text" name="fin_type">
-        <button type="submit">Find</button>
-        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+    <form class="form-horizontal" action="/findOrderByFinType" method="post" role="form">
+        <div class="form-group">
+            <label class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="Financing type" name="fin_type">
+            </div>
+        </div>
+        <div  class="form-group">
+            <div class="col-sm-1 col-sm-10">
+                <button type="submit" class="btn btn-default">Find</button>
+            </div>
+        </div>
     </form>
 
-    <table class="table table-hover">
+    <table class="table table-hover table-bordered table-condensed">
         <thead>
         <tr>
             <th>Order date</th>

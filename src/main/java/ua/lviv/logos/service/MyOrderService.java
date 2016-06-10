@@ -28,4 +28,6 @@ public interface MyOrderService {
     public List<MyOrder> findByAuto(String auto);
 
     public List<MyOrder> findByFinType(String fin_type);
+
+    public List<MyOrder>findAllOrdersByUserId(int id);
 }

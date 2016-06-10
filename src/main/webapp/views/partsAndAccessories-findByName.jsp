@@ -12,30 +12,37 @@
     <title>Find parts and accessories by name</title>
 </head>
 <body>
-<h4>Input data:</h4>
-<form action="/findPartsByName" method="post">
-    Name <input type="text" name="name">
-    <button type="submit">Find</button>
-    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-</form>
+    <form class="form-horizontal" action="/findPartsByName" method="post" role="form">
+        <div class="form-group">
+            <label class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="Name" name="name">
+            </div>
+        </div>
+        <div  class="form-group">
+            <div class="col-sm-1 col-sm-10">
+                <button type="submit" class="btn btn-default">Find</button>
+            </div>
+        </div>
+    </form>
 
-<table class="table table-hover">
-    <thead>
-    <tr>
-        <th>Name</th>
-        <th>Amount</th>
-        <th>Price</th>
-    </tr>
-    </thead>
-    <tbody>
-    <c:forEach items="${partsAndAccessoriess}" var="a">
+    <table class="table table-hover table-bordered table-condensed">
+        <thead>
         <tr>
-            <td>${a.name}</td>
-            <td>${a.amount}</td>
-            <td>${a.price}</td>
+            <th>Name</th>
+            <th>Amount</th>
+            <th>Price</th>
         </tr>
-    </c:forEach>
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+        <c:forEach items="${partsAndAccessoriess}" var="a">
+            <tr>
+                <td>${a.name}</td>
+                <td>${a.amount}</td>
+                <td>${a.price}</td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
 </body>
 </html>

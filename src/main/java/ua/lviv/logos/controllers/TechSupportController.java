@@ -20,11 +20,6 @@ public class TechSupportController {
     @Autowired
     private TechSupportService techSupportService;
 
-    @RequestMapping(value = "/techSupport-main", method = RequestMethod.GET)
-    public String techSupportMain(){
-        return "techSupport-main";
-    }
-
     @RequestMapping(value = "/showAllTechSupport", method = RequestMethod.GET)
     public String showAlltechSupport(Model model){
         List<TechSupport> techSupportList = techSupportService.findAll();

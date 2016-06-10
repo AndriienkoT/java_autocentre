@@ -7,7 +7,7 @@
 </head>
 <body>
     <a href="/myCabinet=${users.id}">
-        <table class="table table-hover">
+        <table class="table table-hover table-bordered table-condensed">
             <thead>
                 <tr>
                     <th>Name</th>

@@ -13,7 +13,7 @@
 </head>
 <body>
 <h3>All cars</h3>
-<table class="table table-hover">
+<table class="table table-hover table-bordered table-condensed">
     <thead>
     <tr>
         <th>Car model</th>
@@ -23,6 +23,7 @@
         <th>Car year of issue</th>
         <th>Car mileage</th>
         <th>Car price</th>
+        <th>Picture</th>
     </tr>
     </thead>
     <tbody>
@@ -35,6 +36,8 @@
             <td>${a.year_of_issue}</td>
             <td>${a.mileage}</td>
             <td>${a.price}</td>
+                <%--<td><img src="data:images/cars/jpeg;base64,${a.avatar}"/></td>--%>
+            <td><img src="<c:url value="../resources/images/cars/${a.id}.jpg"></c:url>"  class="img-polaroid"></td>
         </tr>
     </c:forEach>
     </tbody>

@@ -13,13 +13,24 @@
     <title>New technical support</title>
 </head>
 <body>
-    <h4>Input data:</h4>
-    <form action="/createNewTechSupport" method="post" >
-        Support type <input type="text" name="support_type">
-        Price <input type="text" name="price">
-        <button type="submit">Create</button>
-        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+    <form class="form-horizontal" action="/createNewTechSupport" method="post" role="form">
+        <div  class="form-group">
+            <label for="inputSupportType" class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputSupportType" placeholder="Support type" name="support_type">
+            </div>
+        </div>
+        <div  class="form-group">
+            <label for="inputPrice" class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputPrice" placeholder="Price" name="price">
+            </div>
+        </div>
+        <div  class="form-group">
+            <div class="col-sm-1 col-sm-10">
+                <button type="submit" class="btn btn-default">Create</button>
+            </div>
+        </div>
     </form>
-
 </body>
 </html>
