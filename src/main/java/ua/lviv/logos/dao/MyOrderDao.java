@@ -27,5 +27,5 @@ public interface MyOrderDao {
 
     public List<MyOrder> findByFinType(String fin_type);
 
-    public List<MyOrder>findAllOrdersByUserId(int id);
+    public List<MyOrder> findAllOrdersByUserId(int id);
 }

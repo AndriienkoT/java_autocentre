@@ -7,7 +7,8 @@
 
 
     <http use-expressions="true">
-        <intercept-url pattern="/new*" access="hasRole('ROLE_ADMIN')"/>
+        <intercept-url pattern="/*-new.jsp" access="hasRole('ROLE_ADMIN')"/>
+        <intercept-url pattern="/*-delete.jsp" access="hasRole('ROLE_ADMIN')"/>
         <logout logout-url="/logout" logout-success-url="/" />
         <form-login login-page="/loginpage" login-processing-url="/loginprocessing" />
         <csrf disabled="true"/>
@@ -21,7 +22,6 @@
         <authentication-provider>
             <user-service>
                 <user name="admin" password="admin" authorities="ROLE_ADMIN" />
-                <user name="tanya" password="tanya" authorities="ROLE_USER"/>
             </user-service>
         </authentication-provider>
 

@@ -65,7 +65,7 @@ public class MyOrderDaoImpl implements MyOrderDao {
     }
 
     @Transactional
-    public List<MyOrder>findAllOrdersByUserId(int id){
+    public List<MyOrder> findAllOrdersByUserId(int id){
         return entityManager.createNamedQuery("MyOrder.findAllOrdersByUserId", MyOrder.class).setParameter("id", id).getResultList();
     }
 }

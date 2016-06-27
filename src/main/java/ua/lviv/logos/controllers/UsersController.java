@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import ua.lviv.logos.entity.Users;
+import ua.lviv.logos.service.MyOrderService;
 import ua.lviv.logos.service.UsersService;
 
 
@@ -16,6 +17,8 @@ public class UsersController {
 
     @Autowired
     private UsersService usersService;
+    @Autowired
+    private MyOrderService myOrderService;
 
     @RequestMapping(value = "/registration", method = RequestMethod.GET)
     private String newUser(Model model){
@@ -32,6 +35,7 @@ public class UsersController {
     @RequestMapping(value = "/myCabinet={id}", method = RequestMethod.GET)
     public String myCabinet(@PathVariable String id, Model model){
         model.addAttribute("users",usersService.findById(Integer.parseInt(id)));
+        model.addAttribute("myOrders", myOrderService.findAllOrdersByUserId(Integer.parseInt(id)));
         return "user";
     }
 

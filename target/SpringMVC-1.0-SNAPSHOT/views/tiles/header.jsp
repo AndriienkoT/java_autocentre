@@ -25,11 +25,11 @@
                     </button>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="/showAllCars">All cars</a></li>
-                        <li><sec:authorize access="hasRole('ROLE_ADMIN')"><a href="/newCar">Create new car</a></sec:authorize></li>
+                        <sec:authorize access="hasRole('ROLE_ADMIN')"><li><a href="/newCar">Create new car</a></li></sec:authorize>
                         <li><a href=/findByModel>Find car by model</a></li>
                         <li><a href=/findByEngineVolume>Find car by engine volume</a></li>
                         <li><a href=/findByYearOfIssue>Find car by year of issue</a></li>
-                        <li><sec:authorize access="hasRole('ROLE_ADMIN')"><a href="/deleteCar">Delete car</a></sec:authorize></li>
+                        <sec:authorize access="hasRole('ROLE_ADMIN')"><li><a href="/deleteCar">Delete car</a></li></sec:authorize>
                     </ul>
                 </div>
                 <div class="btn-group">
@@ -47,12 +47,12 @@
                     </button>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href=/showAllOrders>All order</a></li>
-                        <li><sec:authorize access="hasRole('ROLE_ADMIN')"><a href="/newOrder">Create new order</a></sec:authorize></li>
+                        <sec:authorize access="hasRole('ROLE_ADMIN')"><li><a href="/newOrder">Create new order</a></li></sec:authorize>
                         <li><a href=/findByCustomer>Find order by customer</a></li>
                         <li><a href=/findByOrderDate>Find order by order date</a></li>
                         <li><a href=/findByAuto>Find order by auto</a></li>
                         <li><a href=/findByFinType>Find order by financing type</a></li>
-                        <li><sec:authorize access="hasRole('ROLE_ADMIN')"><a href="/deleteOrder">Delete order</a></sec:authorize></li>
+                        <sec:authorize access="hasRole('ROLE_ADMIN')"><li><a href="/deleteOrder">Delete order</a></li></sec:authorize>
                     </ul>
                 </div>
                 <div class="btn-group">
@@ -61,9 +61,9 @@
                     </button>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href=/showAllPartsAndAccessories>All parts and accessories</a></li>
-                        <li><sec:authorize access="hasRole('ROLE_ADMIN')"><a href="/newPartsAndAccessories">Create new part or accessory</a></sec:authorize></li>
+                        <sec:authorize access="hasRole('ROLE_ADMIN')"><li><a href="/newPartsAndAccessories">Create new part or accessory</a></li></sec:authorize>
                         <li><a href=/findByName>Find parts and accessories by name</a></li>
-                        <li><sec:authorize access="hasRole('ROLE_ADMIN')"><a href="/deletePartsAndAccessories">Delete part or accessory</a></sec:authorize></li>
+                        <sec:authorize access="hasRole('ROLE_ADMIN')"><li><a href="/deletePartsAndAccessories">Delete part or accessory</a></li></sec:authorize>
                     </ul>
                 </div>
                 <div class="btn-group">
@@ -72,9 +72,9 @@
                     </button>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href=/showAllTechSupport>All technical support</a></li>
-                        <li><sec:authorize access="hasRole('ROLE_ADMIN')"><a href="/newTechSupport">Create new technical support</a></sec:authorize></li>
+                        <sec:authorize access="hasRole('ROLE_ADMIN')"><li><a href="/newTechSupport">Create new technical support</a></li></sec:authorize>
                         <li><a href=/findBySupportType>Find support type</a></li>
-                        <li><sec:authorize access="hasRole('ROLE_ADMIN')"><a href="/deleteTechSupport">Delete technical support</a></sec:authorize></li>
+                        <sec:authorize access="hasRole('ROLE_ADMIN')"><li><a href="/deleteTechSupport">Delete technical support</a></li></sec:authorize>
                     </ul>
                 </div>
             </div>

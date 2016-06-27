@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ua.lviv.logos.dao.MyOrderDao;
 import ua.lviv.logos.dao.UsersDao;
+import ua.lviv.logos.dto.MyOrderDTO;
 import ua.lviv.logos.entity.MyOrder;
 import ua.lviv.logos.entity.Users;
 import ua.lviv.logos.service.MyOrderService;

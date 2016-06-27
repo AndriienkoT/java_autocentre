@@ -29,7 +29,7 @@
 
 
     <!-- Карусель -->
-    <div id="myCarousel" class="carousel slide" data-interval="6000" data-ride="carousel">
+    <div id="myCarousel" class="carousel slide" data-interval="5000" data-ride="carousel">
         <!-- Индикаторы для карусели -->
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -84,6 +84,6 @@
         </div>
     </div>
 
-    <div><h1 class="space">fghj</h1></div>
+    <div><h1 class="space">just space</h1></div>
 </body>
 </html>
