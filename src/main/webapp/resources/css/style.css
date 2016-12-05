@@ -1,0 +1,29 @@
+
+*{
+    margin-left: 5px;
+}
+.headerClass{
+    margin-bottom: 25px;
+}
+.bodyClass {
+    min-height: 550px;
+    max-height: 50000px;
+}
+.logo {
+    font-size: 1.6em;
+    color: rgba(200, 46, 44, 1);
+}
+form {
+    width: 20%;
+}
+.container {
+    position: fixed;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.1em;
+    color: black;
+}
+.space {
+    color: white;
+}
